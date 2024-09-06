@@ -1,0 +1,10 @@
+services:
+  wandb-server:
+    image: wandb/local
+    container_name: wandb-server-container
+    environment:
+      - WANDB_API_KEY=<WANDB_API_KEY>
+      - WANDB_BASE_URL=http://localhost:8080
+      - WANDB_PROJECT_NAME=<PROJECT_NAME>
+    ports:
+      - "8080:8080"
